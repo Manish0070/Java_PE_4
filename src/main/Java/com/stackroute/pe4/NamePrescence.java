@@ -1,13 +1,17 @@
 package com.stackroute.pe4;
 
+import java.util.regex.Pattern;
+
 public class NamePrescence {
-    public String nameChecker(String inputString){
-        if(inputString.contains("Harry")){
-            return "Is Harry Here? " +inputString.contains("Harry");
-        }
-        else{
-            boolean result=inputString.contains("Harry");
-            return "Is Harry Here?"+result;
-        }
+    public boolean nameChecker(String input){
+
+        String [] data = input.split(" ");
+
+        boolean isMatch = Pattern.matches("Harry",data[2]);
+
+        System.out.println("Is Harry here? "+isMatch);
+
+
+        return isMatch;
     }
 }

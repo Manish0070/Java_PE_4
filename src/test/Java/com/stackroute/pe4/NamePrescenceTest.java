@@ -20,20 +20,20 @@ public class NamePrescenceTest {
     }
 
     @Test
-    public void GivenAStringContainsRequiredWordShouldReturnTrue(){
+    public void inputStringChecksForWordHarry(){
 
-         String actualvalue = namePrescence.nameChecker("This Is Harry");
-        System.out.println(actualvalue);
-
-        assertEquals("Is Harry Here? true",actualvalue);
+        assertEquals(true, namePrescence.nameChecker("This is Harry"));
     }
 
     @Test
-    public void GivenAStringNotContainsRequiredWordShouldReturnFalse(){
+    public void inputStringChecksForWordHarryAndReturnFalse(){
 
-        String actualvalue = namePrescence.nameChecker("This Is Manish");
-        System.out.println(actualvalue);
+        assertEquals(false, namePrescence.nameChecker("This is Henry"));
+    }
 
-        assertEquals("Is Harry Here?false",actualvalue);
+    @Test
+    public void inputStringChecksForNotEquality(){
+
+        assertNotEquals(true, namePrescence.nameChecker("This is Henry"));
     }
 }
