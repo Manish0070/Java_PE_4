@@ -33,7 +33,7 @@ public class NamePrescenceTest {
 
     @Test
     public void givenStringShouldReturnNotNull() {
-        String actualResult = namePrescence.stringMatcher("This is Harry?");
+       String actualResult = namePrescence.stringMatcher("This is Harry?");
         assertNotNull(actualResult);
     }
 }

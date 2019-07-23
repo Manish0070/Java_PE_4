@@ -27,13 +27,12 @@ public class WordFrequencyIndexTest {
         assertEquals(expected,actual);
     }
     @Test
-    public void given() {
+    public void givenInputStringNullShouldReturnErrorMessage() {
         String expected="Found at: 6 - 8\n" +
                 "Found at: 14 - 16";
 
-        String actual=wordFrequencyIndex.sortingFunction("don’t be evil.being evil is bad","be");
-        assertNotNull(actual);
-        assertEquals(expected,actual);
+        String actual=wordFrequencyIndex.sortingFunction(null,"be");
+        assertEquals("Should Not Be Null",actual);
     }
 
 }
