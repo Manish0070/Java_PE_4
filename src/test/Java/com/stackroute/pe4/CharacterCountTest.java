@@ -20,14 +20,14 @@ public class CharacterCountTest {
     public void givenInputStringAndACharacterShouldReturnOccurenceOfCharacter(){
         String string = "This is an Example Of The Character";
 
-        int actuavalue = characterCount.countCharacter("a",string);
+        String actuavalue = characterCount.countCharacter("a",string);
 
-        assertEquals(4,actuavalue);
+        assertEquals("count is 4",actuavalue);
     }
     @Test
     public void givenInputNullAndACharacterShouldReturnNull(){
-        int actuavalue = characterCount.countCharacter("a",null);
-        assertEquals(0,actuavalue);
+        String actuavalue = characterCount.countCharacter("a",null);
+        assertEquals("Should Not Be Null",actuavalue);
 
     }
 

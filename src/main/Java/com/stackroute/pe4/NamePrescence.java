@@ -3,15 +3,9 @@ package com.stackroute.pe4;
 import java.util.regex.Pattern;
 
 public class NamePrescence {
-    public boolean nameChecker(String input){
-
-        String [] data = input.split(" ");
-
-        boolean isMatch = Pattern.matches("Harry",data[2]);
-
-        System.out.println("Is Harry here? "+isMatch);
-
-
-        return isMatch;
+    public String stringMatcher(String inputString) {
+        String result="";
+        result = "Is Harry here ? "+inputString.matches(".*Harry.*");
+        return result;
     }
 }

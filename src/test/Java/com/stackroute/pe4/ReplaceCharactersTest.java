@@ -20,12 +20,13 @@ public class ReplaceCharactersTest {
         replaceCharacters = null;
     }
     @Test
-    public void GivenInputStringAndACharcaterShouldReplaceCharacterInString(){
+    public void givenInputStringAndACharcaterShouldReplaceCharacterInString(){
 
         String actualvalue = replaceCharacters.characterReplace("Manish",'M');
+        assertEquals("manish",actualvalue);
     }
     @Test
-    public void GivenInputNullAndACharcaterShouldReturnError(){
+    public void givenInputNullAndACharcaterShouldReturnError(){
 
         String actualvalue = replaceCharacters.characterReplace(null,'M');
         assertEquals("Not Null",actualvalue);

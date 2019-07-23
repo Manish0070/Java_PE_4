@@ -20,9 +20,15 @@ public class SortingWordTest {
     }
     @Test
     public void givenStringShouldReturnSortedString() {
-        String []actualResult= sortingWord.stringInput("world best batsmen kohli");
-        String []expected="batsmen best kohli world".split("[\\s,]+");
-        assertArrayEquals(expected,actualResult);
+        String actualResult= sortingWord.stringInput("world best batsmen kohli");
+        String expected="[batsmen, best, kohli, world]";
+        assertEquals(expected,actualResult);
+    }
+    @Test
+    public void givenInputNullShouldReturnErrorMessage() {
+        String actualResult= sortingWord.stringInput(null);
+
+        assertEquals("Should Not Be Null",actualResult);
     }
 
 

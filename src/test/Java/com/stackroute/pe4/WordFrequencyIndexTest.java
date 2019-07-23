@@ -20,14 +20,14 @@ public class WordFrequencyIndexTest {
     }
 
     @Test
-    public void matching() {
+    public void givenInputStringAndAWordShouldReturnIndexesOfThatWord() {
         String expected="Found at: 6 - 8\n" +
                 "Found at: 14 - 16";
         String actual=wordFrequencyIndex.sortingFunction("don’t be evil.being evil is bad","be");
         assertEquals(expected,actual);
     }
     @Test
-    public void matchingNotNull() {
+    public void given() {
         String expected="Found at: 6 - 8\n" +
                 "Found at: 14 - 16";
 
